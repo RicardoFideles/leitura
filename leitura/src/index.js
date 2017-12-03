@@ -1,12 +1,21 @@
+import 'bootstrap/dist/css/bootstrap.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+import { applyMiddleware, createStore } from 'redux'
+import { Provider } from 'react-redux'
+import promise  from 'redux-promise'
+
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import reducers from './reducers'
 
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+const store = applyMiddleware(promise)(createStore)(reducers,devTools)
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>, document.getElementById('root')
+);
