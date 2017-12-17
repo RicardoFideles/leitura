@@ -4,6 +4,8 @@ import { Navbar, MenuItem } from 'react-bootstrap';
 const Header = props => {
     const {categories} = props
 
+    console.log(categories)
+
     function handleTitle(title) {
         return title.charAt(0).toUpperCase() + title.slice(1)
     }
@@ -12,7 +14,7 @@ const Header = props => {
         <Navbar inverse collapseOnSelect>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#">Readable Project</a>
+                    <a href="/">Readable Project</a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

@@ -1,5 +1,120 @@
-body {
+ul {
+  list-style: none;
+}
+
+.item {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  margin-bottom: 8px;
+  padding-left: 3px;
+}
+.item .rank {
+  float: left;
+  margin-top: 15px;
+  color: #c6c6c6;
+  font-family: arial;
+  font-size: medium;
+  text-align: right;
+}
+
+body >.content .link .midcol, .midcol-spacer {
+  width: 6.1ex;
+}
+
+.item .midcol {
+    font-weight: bold;
+    font-size: small;
+}
+.midcol {
+    float: left;
+    margin-right: 7px;
+    margin-left: 7px;
+    background: transparent;
+    overflow: hidden;
+}
+
+.arrow {
+  margin: 2px 0px 0px 0px;
+  width: 100%;
+  height: 14px;
+  display: block;
+  cursor: pointer;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+}
+
+.item .score {
+  text-align: center;
+  color: #c6c6c6;
+}
+
+.arrow.up {
+  background-image: url('assets/sprite-reddit.bTLvdEETokI.png');
+  background-position: -42px -1647px;
+  background-repeat: no-repeat;
+}
+
+.arrow.down {
+  background-image: url('assets/sprite-reddit.bTLvdEETokI.png');
+  background-position: 0px -1647px;
+  background-repeat: no-repeat;
+}
+
+a.thumbnail {
+  position: relative;
+}
+.thumbnail {
+  float: left;
+  font-size: 0;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  margin-top: 0;
+  margin-left: 0;
+  overflow: hidden;
+  width: 70px;
+}
+a {
+  text-decoration: none;
+  color: #369;
+}
+
+@media only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .thumbnail {
+    background-size: 100%;
+  }
+}
+
+.item-holder {
+  overflow: hidden;
+  margin-left: 3px;
+  opacity: 1;
+}
+
+
+.link .flat-list {
+  display: block;
+  padding: 1px 0;
+}
+
+.flat-list {
+  list-style-type: none;
+}
+
+.item .buttons li {
+  display: inline-block;
+  border: none;
+  padding-right: 4px;
+  line-height: 1.6em;
+}
+
+.flat-list li, .flat-list form {
+  display: inline;
+  white-space: nowrap;
+}
+
+.item .buttons li+li {
+  padding-left: 4px;
 }

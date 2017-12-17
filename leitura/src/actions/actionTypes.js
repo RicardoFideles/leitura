@@ -1,4 +1,7 @@
 export const ADD_POST = 'ADD_POST'
 export const FETCH_POSTS = 'FETCH_POSTS'
+export const FETCH_POST = 'FETCH_POST'
 export const FETCH_CATEGORIES = 'FETCH_CATEGORIES'
 export const FETCH_POSTS_CATEGORIES = 'FETCH_POSTS_CATEGORIES'
+export const SHOW_MODAL = 'SHOW_MODAL'
+export const CLOSE_MODAL = 'CLOSE_MODAL'

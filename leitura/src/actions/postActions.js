@@ -9,3 +9,12 @@ export function loadPosts (category) {
         payload : request
     }
 }
+
+export function loadPost (id) {
+    let request= postsAPI.getPost(id)
+
+    return {
+        type : types.FETCH_POST,
+        payload : request
+    }
+}

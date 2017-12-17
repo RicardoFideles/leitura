@@ -1,6 +1,6 @@
 import * as types from '../actions/actionTypes';
 
-export default function categoryReducer(state = { categories : [], postsFromCategory : [] }, action) {
+export default function categories(state = { categories : [], postsFromCategory : [] }, action) {
     switch (action.type) {
         case types.FETCH_CATEGORIES:
             return {...state, categories : action.payload.data.categories }
