@@ -9,9 +9,7 @@ import { Grid, Row, Col } from 'react-bootstrap'
 import ModalForm from './ModalForm'
 import { openModal } from '../actions/modalActions'
 
-
 class App extends Component {
-
 
   componentWillMount() {
     this.props.loadCategories()
