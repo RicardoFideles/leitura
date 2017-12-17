@@ -4,6 +4,7 @@ import { Field, reduxForm } from 'redux-form'
 import { bindActionCreators } from 'redux'
 import { Modal, Button, FormGroup, ControlLabel, HelpBlock, FormControl } from 'react-bootstrap'
 import  { closeModal } from '../actions/modalActions'
+import { addPost } from '../actions/postActions'
 import PostForm from './PostForm'
 import classNames from 'classnames'
 import uuid from 'uuid'
@@ -64,6 +65,8 @@ class ModalForm extends Component {
 
         console.log(post)
 
+        this.props.addPost(post)
+
         this.props.closeModal()
     }
 
@@ -100,5 +103,5 @@ const mapStateToProps = state => ({
     showModal: state.modal.showModal,
     categories: state.categoryList.categories,
 })
-const mapDispatchToProps = dispatch => bindActionCreators({ closeModal }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ closeModal, addPost }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ModalForm)

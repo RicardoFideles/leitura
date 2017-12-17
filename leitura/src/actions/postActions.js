@@ -18,3 +18,13 @@ export function loadPost (id) {
         payload : request
     }
 }
+
+export function addPost (post) {
+    let request= postsAPI.addPost(post)
+
+    return {
+        type : types.ADD_POST,
+        post : post,
+        payload : request
+    }
+}
