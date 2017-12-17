@@ -10,22 +10,19 @@ import { Grid, Row, Col } from 'react-bootstrap'
 
 class App extends Component {
 
-
   componentWillMount() {
-
     const urlParams = this.props.match.params
     const category = urlParams.category
     this.props.loadCategories()
     this.props.loadPostsFromCategory(category)
-
   }
 
   render() {
-    const {categories, postsFromCategory} = this.props
+    const {categories, postsFromCategory, history} = this.props
     let postsToShow = postsFromCategory
     return (
       <div>
-        <Header categories={categories}></Header>
+        <Header categories={categories} history={history}></Header>
         <Grid>
           <Row className="show-grid">
             <Col xs={12} md={8} >

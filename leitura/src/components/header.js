@@ -21,7 +21,7 @@ const Header = props => {
             <Navbar.Collapse>
                 <ul className="nav navbar-nav">
                     {categories.map(category => (
-                        <MenuItem key={category.path} href={category.path}>{handleTitle(category.name)}</MenuItem>
+                        <MenuItem key={category.path} href={`/${category.path}`}>{handleTitle(category.name)}</MenuItem>
                     ))}
                 </ul>
             </Navbar.Collapse>
